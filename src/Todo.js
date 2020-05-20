@@ -9,24 +9,9 @@ export default function Todo({ todo, toggleTodo, deleteTodo }) {
   }
 
   return (
-    <div>
-      <button
-        style={{
-          position: 'absolute',
-
-          right: '10px',
-
-          width: '20px',
-          height: '20px',
-          margin: '0',
-          fontSize: ' 15px',
-          color: '#cc9a9a',
-          marginBottom: '11px',
-          transition: ' color 0.2s ease-out',
-        }}
-        onClick={handleDeleteTodo}
-      >
-        x
+    <div style={{ borderColor: 'black', borderWidth: '10px' }}>
+      <button onClick={handleDeleteTodo}>
+        <strong>x</strong>
       </button>
       <input
         type="checkbox"
@@ -34,7 +19,7 @@ export default function Todo({ todo, toggleTodo, deleteTodo }) {
         onChange={handleTodoClick}
       />
 
-      {todo.name}
+      <u> {todo.name}</u>
     </div>
   );
 }

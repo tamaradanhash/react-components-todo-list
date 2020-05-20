@@ -1,11 +1,18 @@
 body {
-  margin: 0;
+  margin: 40px 20px 40px 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: aqua;
+  background-color: rgb(123, 207, 123);
+}
+button {
+  border-radius: 10px;
+  border-color: rgb(221, 151, 221);
+  border-width: 5px;
+  border-style: solid;
+  background: rgb(212, 212, 212);
 }
 
 code {
