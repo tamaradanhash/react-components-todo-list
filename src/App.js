@@ -51,7 +51,7 @@ function App() {
   }
   return (
     <>
-      <form onSubmit={handleAddTodo}>
+      <form>
         <input
           placeholder="what needs to be done"
           type="text"
@@ -59,14 +59,11 @@ function App() {
           value={draft.name}
         />
         <button onClick={handleAddTodo}>Add Todo</button>
-        <button onClick={handleClearTodos}>Clear Completed</button>
-        <TodoList
-          todos={todos}
-          toggleTodo={toggleTodo}
-          deleteTodo={deleteTodo}
-        />
-        <div>{todos.filter((todo) => !todo.completed).length} left to do</div>
       </form>
+      <button onClick={handleClearTodos}>Clear Completed</button>
+      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+      <div>{todos.filter((todo) => !todo.completed).length} left to do</div>
+      <button onClick={() => setTodos([])}>Clear all todos </button>
     </>
   );
 }
